@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "Examples/HelloWorldScene.h"
 
 USING_NS_CC;
 
@@ -61,9 +61,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     register_all_packages();
 
-    auto scene = HelloWorld::createScene();
-
-    director->runWithScene(scene);
+//    auto scene = HelloWorld::createScene();
+//
+//    director->runWithScene(scene);
 
     return true;
 }
