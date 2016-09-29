@@ -3,16 +3,16 @@
 
 USING_NS_CC;
 
-Scene* HelloWorld::createScene() {
+Scene* GameScene::createScene() {
     auto scene = Scene::create();
-    auto layer = HelloWorld::create();
+    auto layer = GameScene::create();
 
     scene->addChild(layer);
 
 	return scene;
 }
 
-bool HelloWorld::init() {
+bool GameScene::init() {
 	if (!Layer::init()) {
 		return false;
 	}
