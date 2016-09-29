@@ -24,8 +24,9 @@ bool HelloWorld::init() {
 	background->drawSolidRect(origin, visibleSize, Color4F(0.5, 0.5, 0.5, 1.0));
 	this->addChild(background);
 
-	pause = Sprite::create("pause.png");
-	pause->setPosition(Vec2(visibleSize.width / 10, visibleSize.height / 10));
+	pause = Sprite::create("pause-sprite.png");
+    pause->setScale(1);
+	pause->setPosition(Vec2(visibleSize.width - pause->getContentSize().width, pause->getContentSize().height));
 	this->addChild(pause);
 
     return true;
