@@ -23,15 +23,22 @@ bool GameScene::init() {
 	background->drawSolidRect(origin, visibleSize, Color4F(0.5, 0.5, 0.5, 1.0));
 	this->addChild(background);
 
-    feet = Sprite::create("images/feet.png");
-    feet->setScale(1);
-    feet->setPosition(Vec2(visibleSize.width / 2, feet->getContentSize().height / 2));
-    this->addChild(feet);
-
     pause = Sprite::create("images/pause.png");
     pause->setScale(1);
 	pause->setPosition(Vec2(visibleSize.width - pause->getContentSize().width, pause->getContentSize().height));
 	this->addChild(pause);
 
+	feet = new Feet(this);
+
+	auto eventListener = EventListenerTouchOneByOne::create();
+	eventListener->onTouchBegan = CC_CALLBACK_2(GameScene::onTouchBegan, this);
+	this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(eventListener, this);
+
     return true;
+}
+
+bool GameScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event) {
+	
+	feet->Move(touch->getLocation());
+	return true;
 }
