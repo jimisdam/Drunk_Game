@@ -5,8 +5,6 @@
 
 class MainMenuScene : public cocos2d::Layer
 {
-private:
-	cocos2d::Sprite* pause;
 
 public:
     static cocos2d::Scene* createScene();
