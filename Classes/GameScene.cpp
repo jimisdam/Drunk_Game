@@ -1,5 +1,4 @@
 #include "GameScene.h"
-#include "Feet.h"
 
 USING_NS_CC;
 
