@@ -14,7 +14,7 @@ private:
 	const double slope_velocity = 1;
 
 public:
-	Feet(cocos2d::Layer *);
+	explicit Feet(cocos2d::Layer *);
 	void Move(cocos2d::Vec2);
 };
 
