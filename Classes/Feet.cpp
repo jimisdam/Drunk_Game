@@ -6,7 +6,7 @@ Feet::Feet(cocos2d::Layer *layer) {
 	visibleSize = Director::getInstance()->getVisibleSize();
 	origin = Director::getInstance()->getVisibleOrigin();
 
-	feetSprite = Sprite::create("images/feet_l1.png");
+	feetSprite = Sprite::create("images/feet_1.png");
 	feetSprite->setScale(1);
 	feetSprite->setPosition(Vec2(visibleSize.width / 2, feetSprite->getContentSize().height / 2));
 	layer->addChild(feetSprite);
